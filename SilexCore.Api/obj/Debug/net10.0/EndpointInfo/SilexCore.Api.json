@@ -1,0 +1,1001 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "SilexCore.Api | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://localhost:7114"
+    },
+    {
+      "url": "http://localhost:5114"
+    }
+  ],
+  "paths": {
+    "/api/cliente/{idCliente}": {
+      "get": {
+        "tags": [
+          "SilexCore.Api"
+        ],
+        "parameters": [
+          {
+            "name": "idCliente",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "SilexCore.Api"
+        ],
+        "parameters": [
+          {
+            "name": "idCliente",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/cliente/buscar/{busqueda}": {
+      "get": {
+        "tags": [
+          "SilexCore.Api"
+        ],
+        "parameters": [
+          {
+            "name": "busqueda",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/cliente": {
+      "get": {
+        "tags": [
+          "SilexCore.Api"
+        ],
+        "parameters": [
+          {
+            "name": "paginado",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "SilexCore.Api"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewClienteRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "SilexCore.Api"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateClienteRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/cliente/total": {
+      "get": {
+        "tags": [
+          "SilexCore.Api"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/cliente/regimen": {
+      "post": {
+        "tags": [
+          "SilexCore.Api"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewClienteRegimenRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/cliente/actividad": {
+      "post": {
+        "tags": [
+          "SilexCore.Api"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewClienteActividadRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/cliente/{idCliente}/activar": {
+      "patch": {
+        "tags": [
+          "SilexCore.Api"
+        ],
+        "parameters": [
+          {
+            "name": "idCliente",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/consecutivo/negocio/{idEntidad}": {
+      "get": {
+        "tags": [
+          "Consecutivos"
+        ],
+        "operationId": "ObtenerConsecutivoPorNegocio",
+        "parameters": [
+          {
+            "name": "idEntidad",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/consecutivo/negocio/{idEntidad}/tipo/{tipo}": {
+      "get": {
+        "tags": [
+          "Consecutivos"
+        ],
+        "operationId": "ObtenerConsecutivoPorNegocioYTipo",
+        "parameters": [
+          {
+            "name": "idEntidad",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "tipo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Consecutivos"
+        ],
+        "operationId": "ActualizarConsecutivoPorRegistro",
+        "parameters": [
+          {
+            "name": "idEntidad",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "tipo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/consecutivo/{idConsecutivo}": {
+      "put": {
+        "tags": [
+          "Consecutivos"
+        ],
+        "operationId": "ActualizarConsecutivo",
+        "parameters": [
+          {
+            "name": "idConsecutivo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/factura/negocio/{idEntidad}": {
+      "get": {
+        "tags": [
+          "SilexCore.Api"
+        ],
+        "parameters": [
+          {
+            "name": "idEntidad",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/factura/negocio/{idEntidad}/consecutivo/{consecutivo}": {
+      "get": {
+        "tags": [
+          "SilexCore.Api"
+        ],
+        "parameters": [
+          {
+            "name": "idEntidad",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "consecutivo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/factura/{idFactura}": {
+      "get": {
+        "tags": [
+          "SilexCore.Api"
+        ],
+        "parameters": [
+          {
+            "name": "idFactura",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/factura/{idFactura}/historico": {
+      "get": {
+        "tags": [
+          "SilexCore.Api"
+        ],
+        "parameters": [
+          {
+            "name": "idFactura",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/factura/cliente/{idCliente}/exoneraciones": {
+      "get": {
+        "tags": [
+          "SilexCore.Api"
+        ],
+        "parameters": [
+          {
+            "name": "idCliente",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/contribuyente/{identificacion}": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerContribuyente",
+        "parameters": [
+          {
+            "name": "identificacion",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/cabys": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "GetDetalleCabys",
+        "parameters": [
+          {
+            "name": "termino",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/provincias": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerProvincias",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/cantones/{idProvincia}": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerCantonesPorProvincia",
+        "parameters": [
+          {
+            "name": "idProvincia",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/distritos/{idProvincia}/{idCanton}": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerDistritosPorProvinciaYCanton",
+        "parameters": [
+          {
+            "name": "idProvincia",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idCanton",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/tipos-comprobante": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerTiposComprobante",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/medios-pago": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerMediosPago",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/unidades-medida": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerUnidadesMedida",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/tipos-tarifa": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerTiposTarifa",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/tipos-documento-exoneracion": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerTiposDocumentoExoneracion",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/tipos-proceso": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerTiposProceso",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/tipos-impuesto": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerTiposImpuesto",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/porcentajes-exoneracion": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerPorcentajesExoneracion",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/instituciones": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerInstituciones",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/tipos-identificacion": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerTiposIdentificacion",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/estados-recepcion": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerEstadosRecepcion",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/condiciones-impuesto": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerCondicionesImpuesto",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/codigos-producto": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerCodigosProducto",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/acciones-nota": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "ObtenerAccionesNota",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/hacienda/monedas": {
+      "get": {
+        "tags": [
+          "Hacienda Catalogos"
+        ],
+        "operationId": "GetMoneda",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "NewClienteActividadRequest": {
+        "type": "object",
+        "properties": {
+          "idCliente": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "tipo": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "codigo": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "descripcion": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
+      "NewClienteRegimenRequest": {
+        "type": "object",
+        "properties": {
+          "idCliente": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "codigo": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "descripcion": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
+      "NewClienteRequest": {
+        "type": "object",
+        "properties": {
+          "idTipoIdentificacion": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "identificacion": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "nombre": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "codigoPais": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "telefono": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "idProvincia": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "idCanton": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "idDistrito": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "direccion": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      },
+      "UpdateClienteRequest": {
+        "type": "object",
+        "properties": {
+          "idCliente": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "idTipoIdentificacion": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "identificacion": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "nombre": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "codigoPais": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "telefono": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "idProvincia": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "idCanton": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "idDistrito": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
+          },
+          "direccion": {
+            "type": [
+              "null",
+              "string"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "SilexCore.Api"
+    },
+    {
+      "name": "Consecutivos"
+    },
+    {
+      "name": "Hacienda Catalogos"
+    }
+  ]
+}

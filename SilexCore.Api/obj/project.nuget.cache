@@ -1,0 +1,45 @@
+{
+  "version": 2,
+  "dgSpecHash": "rtLAruFYOKM=",
+  "success": true,
+  "projectFilePath": "E:\\Proyectos Licenciatura\\SilexCore\\SilexCore.Api\\SilexCore.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\diego\\.nuget\\packages\\bouncycastle.cryptography\\2.6.2\\bouncycastle.cryptography.2.6.2.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\dapper\\2.1.79\\dapper.2.1.79.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\google.protobuf\\3.32.0\\google.protobuf.3.32.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\k4os.compression.lz4\\1.3.8\\k4os.compression.lz4.1.3.8.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\k4os.compression.lz4.streams\\1.3.8\\k4os.compression.lz4.streams.1.3.8.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\k4os.hash.xxhash\\1.0.8\\k4os.hash.xxhash.1.0.8.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\karin.haciendacatalogservice.client\\1.0.2607.1321\\karin.haciendacatalogservice.client.1.0.2607.1321.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\karin.persistence.dapper\\1.0.2607.1422\\karin.persistence.dapper.1.0.2607.1422.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\mapster\\10.0.11\\mapster.10.0.11.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\mapster.core\\10.0.11\\mapster.core.10.0.11.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.10\\microsoft.aspnetcore.openapi.10.0.10.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\microsoft.openapi\\2.0.0\\microsoft.openapi.2.0.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\mysql.data\\9.7.0\\mysql.data.9.7.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\reactiveui.disposables\\6.0.0\\reactiveui.disposables.6.0.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\reactiveui.primitives\\6.0.0\\reactiveui.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\reactiveui.primitives.core\\6.0.0\\reactiveui.primitives.core.6.0.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\refit\\13.1.0\\refit.13.1.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\refit.httpclientfactory\\13.1.0\\refit.httpclientfactory.13.1.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\system.security.permissions\\8.0.0\\system.security.permissions.8.0.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\system.windows.extensions\\8.0.0\\system.windows.extensions.8.0.0.nupkg.sha512",
+    "C:\\Users\\diego\\.nuget\\packages\\zstdsharp.port\\0.8.6\\zstdsharp.port.0.8.6.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "El paquete \"Microsoft.OpenApi\" 2.0.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
+      "projectPath": "E:\\Proyectos Licenciatura\\SilexCore\\SilexCore.Api\\SilexCore.Api.csproj",
+      "warningLevel": 1,
+      "filePath": "E:\\Proyectos Licenciatura\\SilexCore\\SilexCore.Api\\SilexCore.Api.csproj",
+      "libraryId": "Microsoft.OpenApi",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
+}

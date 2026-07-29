@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Karin.HaciendaCatalogService.Client" Version="1.0.2607.1321" />
+    <PackageReference Include="Karin.Persistence.Dapper" Version="1.0.2607.1422" />
+    <PackageReference Include="Mapster" Version="10.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SilexCore.Domain\SilexCore.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

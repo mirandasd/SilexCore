@@ -1,0 +1,11 @@
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Domain\bin\Debug\net10.0\SilexCore.Domain.deps.json
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Domain\bin\Debug\net10.0\SilexCore.Domain.dll
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Domain\bin\Debug\net10.0\SilexCore.Domain.pdb
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Domain\obj\Debug\net10.0\SilexCore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Domain\obj\Debug\net10.0\SilexCore.Domain.AssemblyInfoInputs.cache
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Domain\obj\Debug\net10.0\SilexCore.Domain.AssemblyInfo.cs
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Domain\obj\Debug\net10.0\SilexCore.Domain.csproj.CoreCompileInputs.cache
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Domain\obj\Debug\net10.0\SilexCore.Domain.dll
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Domain\obj\Debug\net10.0\refint\SilexCore.Domain.dll
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Domain\obj\Debug\net10.0\SilexCore.Domain.pdb
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Domain\obj\Debug\net10.0\ref\SilexCore.Domain.dll
