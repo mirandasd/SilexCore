@@ -1,0 +1,874 @@
+[
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.ClienteEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_2",
+    "RelativePath": "api/cliente/",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paginado",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.ClienteEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_4",
+    "RelativePath": "api/cliente/",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cliente",
+        "Type": "SilexCore.Domain.Dtos.NewClienteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.ClienteEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_7",
+    "RelativePath": "api/cliente/",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cliente",
+        "Type": "SilexCore.Domain.Dtos.UpdateClienteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.ClienteEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_0",
+    "RelativePath": "api/cliente/{idCliente:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCliente",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.ClienteEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_9",
+    "RelativePath": "api/cliente/{idCliente:int}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCliente",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.ClienteEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_8",
+    "RelativePath": "api/cliente/{idCliente:int}/activar",
+    "HttpMethod": "PATCH",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCliente",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.ClienteEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_6",
+    "RelativePath": "api/cliente/actividad",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "actividad",
+        "Type": "SilexCore.Domain.Dtos.NewClienteActividadRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.ClienteEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_1",
+    "RelativePath": "api/cliente/buscar/{busqueda}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "busqueda",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.ClienteEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_5",
+    "RelativePath": "api/cliente/regimen",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "regimen",
+        "Type": "SilexCore.Domain.Dtos.NewClienteRegimenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.ClienteEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_3",
+    "RelativePath": "api/cliente/total",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.ConsecutivoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_2",
+    "RelativePath": "api/consecutivo/{idConsecutivo:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idConsecutivo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Consecutivos"
+    ],
+    "EndpointName": "ActualizarConsecutivo"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.ConsecutivoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_0",
+    "RelativePath": "api/consecutivo/negocio/{idEntidad:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEntidad",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Consecutivos"
+    ],
+    "EndpointName": "ObtenerConsecutivoPorNegocio"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.ConsecutivoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_1",
+    "RelativePath": "api/consecutivo/negocio/{idEntidad:int}/tipo/{tipo:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEntidad",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "tipo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Consecutivos"
+    ],
+    "EndpointName": "ObtenerConsecutivoPorNegocioYTipo"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.ConsecutivoEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_3",
+    "RelativePath": "api/consecutivo/negocio/{idEntidad:int}/tipo/{tipo:int}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEntidad",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "tipo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Consecutivos"
+    ],
+    "EndpointName": "ActualizarConsecutivoPorRegistro"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.FacturaEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_2",
+    "RelativePath": "api/factura/{idFactura:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idFactura",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.FacturaEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_3",
+    "RelativePath": "api/factura/{idFactura:int}/historico",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idFactura",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.FacturaEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_4",
+    "RelativePath": "api/factura/cliente/{idCliente:int}/exoneraciones",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idCliente",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.FacturaEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_0",
+    "RelativePath": "api/factura/negocio/{idEntidad:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEntidad",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.FacturaEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_1",
+    "RelativePath": "api/factura/negocio/{idEntidad:int}/consecutivo/{consecutivo}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idEntidad",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "consecutivo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_18",
+    "RelativePath": "api/hacienda/acciones-nota",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerAccionesNota"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_1",
+    "RelativePath": "api/hacienda/cabys",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "termino",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "GetDetalleCabys"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_3",
+    "RelativePath": "api/hacienda/cantones/{idProvincia:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idProvincia",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerCantonesPorProvincia"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_17",
+    "RelativePath": "api/hacienda/codigos-producto",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerCodigosProducto"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_16",
+    "RelativePath": "api/hacienda/condiciones-impuesto",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerCondicionesImpuesto"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_0",
+    "RelativePath": "api/hacienda/contribuyente/{identificacion}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "identificacion",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerContribuyente"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_4",
+    "RelativePath": "api/hacienda/distritos/{idProvincia:int}/{idCanton:int}",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idProvincia",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "idCanton",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerDistritosPorProvinciaYCanton"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_15",
+    "RelativePath": "api/hacienda/estados-recepcion",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerEstadosRecepcion"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_13",
+    "RelativePath": "api/hacienda/instituciones",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerInstituciones"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_6",
+    "RelativePath": "api/hacienda/medios-pago",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerMediosPago"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_19",
+    "RelativePath": "api/hacienda/monedas",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "GetMoneda"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_12",
+    "RelativePath": "api/hacienda/porcentajes-exoneracion",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerPorcentajesExoneracion"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_2",
+    "RelativePath": "api/hacienda/provincias",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerProvincias"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_5",
+    "RelativePath": "api/hacienda/tipos-comprobante",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerTiposComprobante"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_9",
+    "RelativePath": "api/hacienda/tipos-documento-exoneracion",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerTiposDocumentoExoneracion"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_14",
+    "RelativePath": "api/hacienda/tipos-identificacion",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerTiposIdentificacion"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_11",
+    "RelativePath": "api/hacienda/tipos-impuesto",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerTiposImpuesto"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_10",
+    "RelativePath": "api/hacienda/tipos-proceso",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerTiposProceso"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_8",
+    "RelativePath": "api/hacienda/tipos-tarifa",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerTiposTarifa"
+  },
+  {
+    "ContainingType": "SilexCore.Api.Endpoints.v1.HaciendaCatalogEndpoints\u002B\u003C\u003Ec",
+    "Method": "\u003CRegistrarEndpoints\u003Eb__0_7",
+    "RelativePath": "api/hacienda/unidades-medida",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ],
+    "Tags": [
+      "Hacienda Catalogos"
+    ],
+    "EndpointName": "ObtenerUnidadesMedida"
+  }
+]

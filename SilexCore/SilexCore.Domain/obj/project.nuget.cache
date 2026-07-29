@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "N7GdwhQUuLU=",
+  "success": true,
+  "projectFilePath": "E:\\Proyectos Licenciatura\\SilexCore\\SilexCore.Domain\\SilexCore.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\diego\\.nuget\\packages\\dapper\\2.1.79\\dapper.2.1.79.nupkg.sha512"
+  ],
+  "logs": []
+}

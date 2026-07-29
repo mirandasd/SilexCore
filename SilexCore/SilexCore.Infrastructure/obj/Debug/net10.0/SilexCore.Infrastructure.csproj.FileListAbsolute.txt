@@ -1,0 +1,15 @@
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Infrastructure\bin\Debug\net10.0\SilexCore.Infrastructure.deps.json
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Infrastructure\bin\Debug\net10.0\SilexCore.Infrastructure.dll
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Infrastructure\bin\Debug\net10.0\SilexCore.Infrastructure.pdb
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Infrastructure\bin\Debug\net10.0\SilexCore.Domain.dll
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Infrastructure\bin\Debug\net10.0\SilexCore.Domain.pdb
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Infrastructure\obj\Debug\net10.0\SilexCore.Infrastructure.csproj.AssemblyReference.cache
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Infrastructure\obj\Debug\net10.0\SilexCore.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Infrastructure\obj\Debug\net10.0\SilexCore.Infrastructure.AssemblyInfoInputs.cache
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Infrastructure\obj\Debug\net10.0\SilexCore.Infrastructure.AssemblyInfo.cs
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Infrastructure\obj\Debug\net10.0\SilexCore.Infrastructure.csproj.CoreCompileInputs.cache
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Infrastructure\obj\Debug\net10.0\SilexCor.E5138F8E.Up2Date
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Infrastructure\obj\Debug\net10.0\SilexCore.Infrastructure.dll
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Infrastructure\obj\Debug\net10.0\refint\SilexCore.Infrastructure.dll
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Infrastructure\obj\Debug\net10.0\SilexCore.Infrastructure.pdb
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Infrastructure\obj\Debug\net10.0\ref\SilexCore.Infrastructure.dll

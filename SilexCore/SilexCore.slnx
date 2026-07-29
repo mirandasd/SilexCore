@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="SilexCore.Api/SilexCore.Api.csproj" />
+  <Project Path="SilexCore.Application/SilexCore.Application.csproj" />
+  <Project Path="SilexCore.Domain/SilexCore.Domain.csproj" />
+  <Project Path="SilexCore.Infrastructure/SilexCore.Infrastructure.csproj" />
+</Solution>

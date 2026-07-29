@@ -1,0 +1,15 @@
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Application\bin\Debug\net10.0\SilexCore.Application.deps.json
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Application\bin\Debug\net10.0\SilexCore.Application.dll
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Application\bin\Debug\net10.0\SilexCore.Application.pdb
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Application\bin\Debug\net10.0\SilexCore.Domain.dll
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Application\bin\Debug\net10.0\SilexCore.Domain.pdb
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Application\obj\Debug\net10.0\SilexCore.Application.csproj.AssemblyReference.cache
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Application\obj\Debug\net10.0\SilexCore.Application.GeneratedMSBuildEditorConfig.editorconfig
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Application\obj\Debug\net10.0\SilexCore.Application.AssemblyInfoInputs.cache
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Application\obj\Debug\net10.0\SilexCore.Application.AssemblyInfo.cs
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Application\obj\Debug\net10.0\SilexCore.Application.csproj.CoreCompileInputs.cache
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Application\obj\Debug\net10.0\SilexCor.2BB67709.Up2Date
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Application\obj\Debug\net10.0\SilexCore.Application.dll
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Application\obj\Debug\net10.0\refint\SilexCore.Application.dll
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Application\obj\Debug\net10.0\SilexCore.Application.pdb
+E:\Proyectos Licenciatura\SilexCore\SilexCore.Application\obj\Debug\net10.0\ref\SilexCore.Application.dll

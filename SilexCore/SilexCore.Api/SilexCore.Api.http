@@ -1,0 +1,6 @@
+@SilexCore.Api_HostAddress = http://localhost:5161
+
+GET {{SilexCore.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
