@@ -55,3 +55,37 @@ public record ProvinciaResponse
     public int IdProvincia { get; set; }
     public string? Provincia { get; set; }
 }
+
+// Resultado de la consulta EN VIVO a Hacienda (GET /fe/ex) -- no confundir con
+// ExoneracionResponse (Dtos/FacturacionDtos.cs), que es el registro YA GUARDADO
+// para un cliente. Este es el paso previo: se consulta, se le muestra al usuario,
+// y si la aplica, ahí se persiste con IFacturaRepository.AgregarExoneracionAsync.
+public record ExoneracionHaciendaResponse
+{
+    public string? NumeroDocumento { get; set; }
+    public string? Identificacion { get; set; }
+    public int CodigoProyectoCFIA { get; set; }
+    public decimal PorcentajeExoneracion { get; set; }
+    public int Autorizacion { get; set; }
+    public string? FechaEmision { get; set; }
+    public string? FechaVencimiento { get; set; }
+    public int Ano { get; set; }
+    public List<ExoneracionCabysHaciendaResponse>? Cabys { get; set; }
+    public string? TipoAutorizacion { get; set; }
+    public TipoDocumentoExoneracionHaciendaResponse? TipoDocumento { get; set; }
+    public string? CodigoInstitucion { get; set; }
+    public string? NombreInstitucion { get; set; }
+    public bool PoseeCabys { get; set; }
+}
+
+public record ExoneracionCabysHaciendaResponse
+{
+    public string? Codigo { get; set; }
+    public string? Descripcion { get; set; }
+}
+
+public record TipoDocumentoExoneracionHaciendaResponse
+{
+    public string? Codigo { get; set; }
+    public string? Descripcion { get; set; }
+}

@@ -1,4 +1,5 @@
 ﻿using SilexCore.Api.Interfaces;
+using SilexCore.Domain.Dtos;
 using SilexCore.Domain.Interfaces.Infraestructura.Persistence;
 
 namespace SilexCore.Api.Endpoints.v1;
@@ -27,9 +28,9 @@ public class ConsecutivoEndpoints : IEndpointModule
         .WithName("ObtenerConsecutivoPorNegocioYTipo");
 
         // PUT: /api/consecutivo/5
-        grupo.MapPut("/{idConsecutivo:int}", async (int idConsecutivo, IConsecutivoRepository repo) =>
+        grupo.MapPut("/{idConsecutivo:int}", async (int idConsecutivo, ActualizarConsecutivoRequest body, IConsecutivoRepository repo) =>
         {
-            var (rowsAffected, mensaje) = await repo.ActualizarConsecutivoAsync(idConsecutivo);
+            var (rowsAffected, mensaje) = await repo.ActualizarConsecutivoAsync(idConsecutivo, body.Consecutivo);
 
             return rowsAffected > 0
                 ? Results.Ok(new { Mensaje = mensaje, FilasAfectadas = rowsAffected })

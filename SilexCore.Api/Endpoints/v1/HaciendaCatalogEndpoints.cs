@@ -24,6 +24,13 @@ public class HaciendaCatalogEndpoints : IEndpointModule
             Results.Ok(await service.GetDetalleCabysAsync(termino)))
         .WithName("GetDetalleCabys");
 
+        grupo.MapGet("/exoneracion/{autorizacion}", async (string autorizacion, IHaciendaCatalogServices service) =>
+        {
+            var result = await service.ObtenerExoneracionAsync(autorizacion);
+            return result is not null ? Results.Ok(result) : Results.NotFound();
+        })
+        .WithName("ObtenerExoneracionHacienda");
+
         // ==========================================
         // 2. Ubicación Geográfica
         // ==========================================
@@ -89,6 +96,10 @@ public class HaciendaCatalogEndpoints : IEndpointModule
         grupo.MapGet("/condiciones-impuesto", async (IHaciendaCatalogServices service) =>
             Results.Ok(await service.ObtenerCondicionesImpuestoAsync()))
         .WithName("ObtenerCondicionesImpuesto");
+
+        grupo.MapGet("/condiciones-venta", async (IHaciendaCatalogServices service) =>
+            Results.Ok(await service.ObtenerCondicionesVentaAsync()))
+        .WithName("ObtenerCondicionesVenta");
 
         grupo.MapGet("/codigos-producto", async (IHaciendaCatalogServices service) =>
             Results.Ok(await service.ObtenerCodigosProductoAsync()))

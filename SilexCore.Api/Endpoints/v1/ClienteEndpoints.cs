@@ -26,10 +26,11 @@ namespace SilexCore.Api.Endpoints.v1
                 return Results.Ok(clientes);
             });
 
-            // Listar clientes (con paginado opcional o por query)
-            grupo.MapGet("/", async (string? paginado, IClienteRepository clienteRepo) =>
+            // Listar clientes
+            // TODO: ObtenerClientes() en sw_cliente todavía no soporta paginado (ver Base de datos/sw_cliente_actualizaciones.sql).
+            grupo.MapGet("/", async (IClienteRepository clienteRepo) =>
             {
-                var clientes = await clienteRepo.ObtenerClientesAsync(paginado ?? string.Empty);
+                var clientes = await clienteRepo.ObtenerClientesAsync();
                 return Results.Ok(clientes);
             });
 
@@ -45,8 +46,10 @@ namespace SilexCore.Api.Endpoints.v1
             // Agregar cliente base
             grupo.MapPost("/", async (NewClienteRequest cliente, IClienteRepository clienteRepo) =>
             {
-                var (rows, mensaje) = await clienteRepo.AgregarClienteAsync(cliente);
-                return rows > 0 ? Results.Created($"/cliente", new { mensaje }) : Results.BadRequest(mensaje);
+                var resultado = await clienteRepo.AgregarClienteAsync(cliente);
+                return resultado.IdCliente > 0
+                    ? Results.Created($"/api/cliente/{resultado.IdCliente}", resultado)
+                    : Results.BadRequest(new { mensaje = resultado.Mensaje });
             });
 
             // Agregar régimen a cliente

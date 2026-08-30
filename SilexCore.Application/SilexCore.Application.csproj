@@ -10,4 +10,8 @@
     <ProjectReference Include="..\SilexCore.Domain\SilexCore.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="UseCases\" />
+  </ItemGroup>
+
 </Project>

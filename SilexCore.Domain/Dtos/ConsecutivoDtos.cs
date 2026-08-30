@@ -7,5 +7,10 @@ public record ConsecutivoResponse
     public string? PuntoDeVenta { get; init; }
     public string? Sucursal { get; init; }
     public string? DocumentoAsociado { get; init; }
-    public string? Consecutivo { get; init; }
+    public int Consecutivo { get; init; }
+}
+
+public record ActualizarConsecutivoRequest
+{
+    public int Consecutivo { get; init; }
 }

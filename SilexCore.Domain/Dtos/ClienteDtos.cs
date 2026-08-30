@@ -6,6 +6,7 @@ public record Cliente
     public int IdTipoIdentificacion { get; init; }
     public string? Identificacion { get; init; }
     public string? Nombre { get; init; }
+    public string? Correo { get; init; }
     public string? CodigoPais { get; init; }
     public string? Telefono { get; init; }
     public int IdProvincia { get; init; } = 0;
@@ -14,41 +15,42 @@ public record Cliente
     public string? Direccion { get; init; }
 }
 
-public record CorreoElectronico
-{
-    public string? Correo { get; init; }
-}
-
 public record Regimen
 {
     public int Codigo { get; init; }
     public string? Descripcion { get; init; }
 }
 
+// clienteactividad.estado es tinyint(1) (activo/inactivo de la relación), no el
+// estado de la actividad en Hacienda -- no confundir con datos de la ATV.
 public record Actividad
 {
+    public bool Estado { get; init; }
     public string? Tipo { get; init; }
     public string? Codigo { get; init; }
     public string? Descripcion { get; init; }
 }
 
-public record ClienteSimpleResponse
-{
-    public int IdCliente { get; init; } = 0;
-    public string? Nombre { get; init; }
-}
-
+// Coincide con las columnas planas que devuelven ObtenerClientePorId /
+// ObtenerClientes / ObtenerClientePorNombreOIdentificacion en sw_cliente.
+// Regimen/Actividades se completan aparte (ObtenerClienteRegimen /
+// ObtenerClienteActividades) solo cuando se pide el detalle de un cliente.
 public record ClienteResponse : Cliente
 {
     public int IdCliente { get; init; } = 0;
-    public string? Estado { get; init; }
+    public bool Estado { get; init; }
 
-    public List<CorreoElectronico>? Correos { get; init; }
     public Regimen? Regimen { get; init; }
     public List<Actividad>? Actividades { get; init; }
 }
 
 public record NewClienteRequest : Cliente;
+
+public record AgregarClienteResponse
+{
+    public int IdCliente { get; init; }
+    public string? Mensaje { get; init; }
+}
 
 public record UpdateClienteRequest : Cliente
 {
@@ -71,9 +73,14 @@ public record NewClienteMinimoRequest : ClienteMinimo
 }
 
 // 3. Sub-modelos relacionados
-public record NewClienteActividadRequest : Actividad
+// No hereda de Actividad: AgregarClienteActividad (SP) no recibe "estado",
+// ese flag lo controla la propia relación clienteactividad por su cuenta.
+public record NewClienteActividadRequest
 {
     public int IdCliente { get; init; } = 0;
+    public string? Tipo { get; init; }
+    public string? Codigo { get; init; }
+    public string? Descripcion { get; init; }
 }
 
 public record NewClienteRegimenRequest : Regimen

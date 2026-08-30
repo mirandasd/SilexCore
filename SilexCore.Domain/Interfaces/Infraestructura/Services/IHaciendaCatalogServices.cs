@@ -10,7 +10,9 @@ public interface IHaciendaCatalogServices
     Task<IEnumerable<CantonResponse>> ObtenerCantonesPorProvinciaAsync(int idProvincia);
     Task<IEnumerable<OpcionDeFacturacionResponse>> ObtenerCodigosProductoAsync();
     Task<IEnumerable<OpcionDeFacturacionResponse>> ObtenerCondicionesImpuestoAsync();
+    Task<IEnumerable<OpcionDeFacturacionResponse>> ObtenerCondicionesVentaAsync();
     Task<ContribuyenteResponse?> ObtenerContribuyenteAsync(string identificacion);
+    Task<ExoneracionHaciendaResponse?> ObtenerExoneracionAsync(string autorizacion);
     Task<IEnumerable<DistritoResponse>> ObtenerDistritosPorProvinciaYCantonAsync(int idProvincia, int idCanton);
     Task<IEnumerable<OpcionDeFacturacionResponse>> ObtenerEstadosRecepcionAsync();
     Task<IEnumerable<OpcionDeFacturacionResponse>> ObtenerInstitucionesAsync();
@@ -22,6 +24,6 @@ public interface IHaciendaCatalogServices
     Task<IEnumerable<OpcionDeFacturacionResponse>> ObtenerTiposIdentificacionAsync();
     Task<IEnumerable<OpcionDeFacturacionResponse>> ObtenerTiposImpuestoAsync();
     Task<IEnumerable<OpcionDeFacturacionResponse>> ObtenerTiposProcesoAsync();
-    Task<IEnumerable<OpcionDeFacturacionResponse>> ObtenerTiposTarifaAsync();
+    Task<IEnumerable<OpcionDeFacturacionConValorResponse>> ObtenerTiposTarifaAsync();
     Task<IEnumerable<OpcionDeFacturacionResponse>> ObtenerUnidadesMedidaAsync();
 }

@@ -1,5 +1,6 @@
 ﻿using Karin.HaciendaCatalogService.Client.Interface;
 using Mapster;
+using Refit;
 using SilexCore.Domain.Dtos;
 using SilexCore.Domain.Interfaces.Infraestructura.Services;
 
@@ -11,6 +12,19 @@ public class HaciendaCatalogServices(IHaciendaCatalogServiceClient catalogServic
     {
         var result = await catalogServiceClient.ObtenerContribuyenteAsync(identificacion);
         return result?.Adapt<ContribuyenteResponse>();
+    }
+
+    public async Task<ExoneracionHaciendaResponse?> ObtenerExoneracionAsync(string autorizacion)
+    {
+        try
+        {
+            var result = await catalogServiceClient.GetExoneracionAsync(autorizacion);
+            return result?.Adapt<ExoneracionHaciendaResponse>();
+        }
+        catch (ApiException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+        {
+            return null;
+        }
     }
 
     public async Task<IEnumerable<ProvinciaResponse>> ObtenerProvinciasAsync()
@@ -49,10 +63,10 @@ public class HaciendaCatalogServices(IHaciendaCatalogServiceClient catalogServic
         return result.Adapt<IEnumerable<OpcionDeFacturacionResponse>>();
     }
 
-    public async Task<IEnumerable<OpcionDeFacturacionResponse>> ObtenerTiposTarifaAsync()
+    public async Task<IEnumerable<OpcionDeFacturacionConValorResponse>> ObtenerTiposTarifaAsync()
     {
         var result = await catalogServiceClient.ObtenerTiposTarifaAsync();
-        return result.Adapt<IEnumerable<OpcionDeFacturacionResponse>>();
+        return result.Adapt<IEnumerable<OpcionDeFacturacionConValorResponse>>();
     }
 
     public async Task<IEnumerable<OpcionDeFacturacionResponse>> ObtenerTiposDocumentoExoneracionAsync()
@@ -100,6 +114,12 @@ public class HaciendaCatalogServices(IHaciendaCatalogServiceClient catalogServic
     public async Task<IEnumerable<OpcionDeFacturacionResponse>> ObtenerCondicionesImpuestoAsync()
     {
         var result = await catalogServiceClient.ObtenerCondicionesImpuestoAsync();
+        return result.Adapt<IEnumerable<OpcionDeFacturacionResponse>>();
+    }
+
+    public async Task<IEnumerable<OpcionDeFacturacionResponse>> ObtenerCondicionesVentaAsync()
+    {
+        var result = await catalogServiceClient.ObtenerCondicionesVentaAsync();
         return result.Adapt<IEnumerable<OpcionDeFacturacionResponse>>();
     }
 
