@@ -56,5 +56,19 @@ namespace SilexCore.Infrastructure.Persistence
 
         public Task<NotaResponse?> ObtenerNotaPorIdAsync(int idNota)
             => sqlExecutor.QueryFirstOrDefaultAsync<NotaResponse?>("ObtenerNotaPorId", new { idNota }, connectionName: ConnectionNames.Default);
+
+        public Task<(int RowsAffected, string Mensaje)> GuardarHistoricoNotaAsync(
+            int idNota, string clave, string pathXml, string pathPdf, string pathRespuesta, int estadoEnvio, int estadoHacienda)
+            => sqlExecutor.ExecuteSpWithOutputAsync("SP_AgregarHistoricoNota", new
+            {
+                idDocumento = idNota,
+                Fecha = DateTime.Now,
+                Clave = clave,
+                PathDocumentoXml = pathXml,
+                PathDocumentoPdf = pathPdf,
+                PathDocumentoRespuesta = pathRespuesta,
+                EstadoEnvio = estadoEnvio,
+                EstadoHacienda = estadoHacienda
+            }, connectionName: ConnectionNames.Default);
     }
 }

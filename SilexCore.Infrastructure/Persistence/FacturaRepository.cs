@@ -116,7 +116,10 @@ public class FacturaRepository(ISqlExecutor sqlExecutor): IFacturaRepository
                         poseeCabys = linea.Exoneracion.PoseeCabys
                     });
 
-                    if (rowsExo <= 0 || !int.TryParse(idExoneracionStr, out idExoneracion))
+                    // AgregarExoneracionCompleta es get-or-create: cuando la exoneración ya
+                    // existe no hace ningún INSERT, así que rowsExo llega en 0 aunque el OUT
+                    // sí traiga el id real -- no sirve como señal de éxito, solo el id parseado.
+                    if (!int.TryParse(idExoneracionStr, out idExoneracion) || idExoneracion <= 0)
                         throw new InvalidOperationException($"No se pudo registrar la exoneración: {idExoneracionStr}");
 
                     if (linea.Exoneracion.PoseeCabys && linea.Exoneracion.Cabys is { Count: > 0 })
@@ -208,8 +211,11 @@ public class FacturaRepository(ISqlExecutor sqlExecutor): IFacturaRepository
                 poseeCabys = exoneracion.PoseeCabys
             });
 
-            if (rows <= 0 || !int.TryParse(idExoneracionStr, out var idExoneracion))
-                return (rows, idExoneracionStr);
+            // Mismo caso que en RegistrarFacturaCompletaAsync: get-or-create no reporta
+            // filas afectadas cuando reusa una exoneración existente, así que el éxito lo
+            // marca el id parseado, no "rows".
+            if (!int.TryParse(idExoneracionStr, out var idExoneracion) || idExoneracion <= 0)
+                return (0, idExoneracionStr);
 
             if (exoneracion.PoseeCabys && exoneracion.Cabys is { Count: > 0 })
             {
@@ -224,7 +230,7 @@ public class FacturaRepository(ISqlExecutor sqlExecutor): IFacturaRepository
                 }
             }
 
-            return (rows, idExoneracionStr);
+            return (1, idExoneracionStr);
         }, connectionName: ConnectionNames.Default);
 
     public Task<IEnumerable<ExoneracionResponse>> ObtenerExoneracionPorIdClienteAsync(int idCliente)

@@ -18,4 +18,18 @@ public class RecepcionRepository(ISqlExecutor sqlExecutor): IRecepcionRepository
 
     public Task<RecepcionDetalleResponse?> ObtenerPorIdAsync(int idRecepcionDocumento)
         => sqlExecutor.QueryFirstOrDefaultAsync<RecepcionDetalleResponse?>("ObtenerRecepcionDocumentoPorId", new { IdRecepcionDocumento = idRecepcionDocumento }, connectionName: ConnectionNames.Default);
+
+    public Task<(int RowsAffected, string Mensaje)> GuardarHistoricoRecepcionAsync(
+        int idRecepcion, string consecutivo, string pathXml, string pathPdf, string pathRespuesta, int estadoEnvio, int estadoHacienda)
+        => sqlExecutor.ExecuteSpWithOutputAsync("SP_AgregarHistoricoRecepcion", new
+        {
+            idDocumento = idRecepcion,
+            Fecha = DateTime.Now,
+            Consecutivo = consecutivo,
+            PathDocumentoXml = pathXml,
+            PathDocumentoPdf = pathPdf,
+            PathDocumentoRespuesta = pathRespuesta,
+            EstadoEnvio = estadoEnvio,
+            EstadoHacienda = estadoHacienda
+        }, connectionName: ConnectionNames.Default);
 }

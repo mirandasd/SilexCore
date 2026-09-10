@@ -10,4 +10,7 @@ public interface IRecepcionRepository
     // ValidarClaveRecepcionDeDocumento es un SELECT plano (sin OUT msj): devuelve
     // el Id de la recepción si la clave ya fue recibida, o null si no existe.
     Task<int?> ValidarClaveRecepcionDeDocumentoAsync(string clave);
+
+    Task<(int RowsAffected, string Mensaje)> GuardarHistoricoRecepcionAsync(
+        int idRecepcion, string consecutivo, string pathXml, string pathPdf, string pathRespuesta, int estadoEnvio, int estadoHacienda);
 }

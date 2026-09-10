@@ -55,5 +55,24 @@ public class NotaEndpoints : IEndpointModule
             var (contenido, contentType) = resultado.Value;
             return Results.File(contenido, contentType, contentType == "application/pdf" ? $"nota-{idNota}.pdf" : null);
         });
+
+        // Envía una nota ya registrada a Hacienda (firma + envío vía InvoicingService)
+        // y guarda Clave/Estado/rutas en facturacionnotahst.
+        grupo.MapPost("/{idNota:int}/enviar", async (int idNota, INotaEnvioService notaEnvio, IBitacoraService bitacora) =>
+        {
+            try
+            {
+                var resultado = await notaEnvio.EnviarNotaAsync(idNota);
+                await bitacora.RegistrarNegocioBitacoraAsync(
+                    $"Nota enviada a Hacienda: clave {resultado.Clave}, estado {resultado.Estado}", string.Empty);
+                return Results.Ok(resultado);
+            }
+            catch (Exception ex)
+            {
+                await bitacora.RegistrarErrorBitacoraAsync($"Error al enviar la nota {idNota} a Hacienda: {ex.Message}", string.Empty);
+                return Results.BadRequest(new { mensaje = ex.Message });
+            }
+        })
+        .WithName("EnviarNota");
     }
 }

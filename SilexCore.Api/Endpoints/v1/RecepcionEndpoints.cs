@@ -71,5 +71,24 @@ public class RecepcionEndpoints : IEndpointModule
             return Results.Created("/api/recepcion", new { mensaje });
         })
         .WithName("AgregarRecepcion");
+
+        // Envía el mensaje receptor (aceptación/rechazo) a Hacienda (firma + envío vía
+        // InvoicingService) y guarda Consecutivo/Estado/rutas en facturacionrecepcionhst.
+        grupo.MapPost("/{idRecepcionDocumento:int}/enviar", async (int idRecepcionDocumento, IRecepcionEnvioService recepcionEnvio, IBitacoraService bitacora) =>
+        {
+            try
+            {
+                var resultado = await recepcionEnvio.EnviarRecepcionAsync(idRecepcionDocumento);
+                await bitacora.RegistrarNegocioBitacoraAsync(
+                    $"Recepción enviada a Hacienda: consecutivo {resultado.Consecutivo}, estado {resultado.Estado}", string.Empty);
+                return Results.Ok(resultado);
+            }
+            catch (Exception ex)
+            {
+                await bitacora.RegistrarErrorBitacoraAsync($"Error al enviar la recepción {idRecepcionDocumento} a Hacienda: {ex.Message}", string.Empty);
+                return Results.BadRequest(new { mensaje = ex.Message });
+            }
+        })
+        .WithName("EnviarRecepcion");
     }
 }
