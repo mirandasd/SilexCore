@@ -10,7 +10,7 @@
     <PackageReference Include="Karin.AuditService.Client" Version="1.0.2605.3119" />
     <PackageReference Include="Karin.AuthService.Client" Version="1.0.2608.321" />
     <PackageReference Include="Karin.HaciendaCatalogService.Client" Version="1.0.2608.919" />
-    <PackageReference Include="Karin.InvoicingService.Client" Version="1.0.2609.920" />
+    <PackageReference Include="Karin.InvoicingService.Client" Version="1.0.2609.1019" />
     <PackageReference Include="Karin.MessagingService.Client" Version="1.0.2606.820" />
     <PackageReference Include="Karin.ReportingService.Client" Version="1.0.2608.419" />
     <PackageReference Include="Karin.Persistence.Dapper" Version="1.0.2607.3019" />

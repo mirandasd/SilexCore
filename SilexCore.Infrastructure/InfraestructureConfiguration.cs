@@ -79,6 +79,7 @@ public static class InfraestructureConfiguration
         services.AddScoped<IFacturaEnvioService, FacturaEnvioService>();
         services.AddScoped<INotaEnvioService, NotaEnvioService>();
         services.AddScoped<IRecepcionEnvioService, RecepcionEnvioService>();
+        services.AddScoped<ICertificadoConsultaService, CertificadoConsultaService>();
 
         #endregion Servicios Internos
 

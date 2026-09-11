@@ -23,3 +23,4 @@ ahora en adelante, cada cambio de SP/tabla como un script reaplicable.
 | Archivo | Base de datos | Qué hace |
 |---|---|---|
 | `2026-09-09_recepcion_rechazar_duplicados.sql` | `sw_procesos` | `AgregarRecepcionDocumento` rechaza una recepción si ya existe la misma clave para el mismo negocio, en vez de insertarla de nuevo. |
+| `2026-09-10_certificados_por_negocio_activo.sql` | `sw_administracion` | Nuevo SP `ObtenerCertificadosPorNegociosActivos`: lista los negocios activos junto con su certificado (si tienen), para el estado de vencimiento en el index de silex-app. |
