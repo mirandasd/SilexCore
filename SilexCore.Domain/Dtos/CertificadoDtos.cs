@@ -13,3 +13,11 @@ public record EstadoCertificadoResponse
     public bool Vencido { get; init; }
     public string? Mensaje { get; init; }
 }
+
+public record GuardarCertificadoResponse
+{
+    public int IdEntidad { get; init; }
+    public string? NombreArchivo { get; init; }
+    public DateTime FechaVencimiento { get; init; }
+    public string Mensaje { get; init; } = string.Empty;
+}
