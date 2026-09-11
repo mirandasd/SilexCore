@@ -14,7 +14,8 @@ public class CertificadoEndpoints : IEndpointModule
             var resultado = await service.ObtenerEstadoCertificadosAsync();
             return Results.Ok(resultado);
         })
-        .WithName("ObtenerEstadoCertificados");
+        .WithName("ObtenerEstadoCertificados")
+        .RequireAuthorization("RequiereRolAdmin");
 
         // Sube/reemplaza el certificado de un negocio -- solo Admin, es la llave
         // de firma legal del negocio.

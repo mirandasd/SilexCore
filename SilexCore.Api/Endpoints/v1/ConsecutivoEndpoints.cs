@@ -9,7 +9,8 @@ public class ConsecutivoEndpoints : IEndpointModule
     public void RegistrarEndpoints(IEndpointRouteBuilder app)
     {
         var grupo = app.MapGroup("/api/consecutivo")
-                   .WithTags("Consecutivos"); // Categoría bonita para Swagger / OpenAPI
+                   .WithTags("Consecutivos") // Categoría bonita para Swagger / OpenAPI
+                   .RequireAuthorization();
 
         // GET: /api/consecutivo/negocio/5
         grupo.MapGet("/negocio/{idEntidad:int}", async (int idEntidad, IConsecutivoRepository repo) =>

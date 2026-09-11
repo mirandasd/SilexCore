@@ -8,7 +8,8 @@ public class HaciendaCatalogEndpoints : IEndpointModule
     public void RegistrarEndpoints(IEndpointRouteBuilder app)
     {
         var grupo = app.MapGroup("/api/hacienda")
-                       .WithTags("Hacienda Catalogos");
+                       .WithTags("Hacienda Catalogos")
+                       .RequireAuthorization();
 
         // ==========================================
         // 1. Consultas Específicas / Búsquedas

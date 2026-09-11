@@ -10,7 +10,8 @@ namespace SilexCore.Api.Endpoints.v1
     {
         public void RegistrarEndpoints(IEndpointRouteBuilder app)
         {
-            var grupo = app.MapGroup("/api/factura");
+            var grupo = app.MapGroup("/api/factura")
+                           .RequireAuthorization();
 
             // --- CONSULTAS (GET) ---
 
