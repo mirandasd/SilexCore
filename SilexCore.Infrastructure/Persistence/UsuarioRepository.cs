@@ -13,7 +13,7 @@ public class UsuarioRepository(ISqlExecutor sqlExecutor) : IUsuarioRepository
             AuthUserId = authUserId,
             usuario.IdEntidad,
             usuario.NombrePersona,
-            usuario.Email,
+            pEmail = usuario.Email,
             usuario.Rol,
             usuario.Telefono,
             usuario.Cargo
@@ -26,7 +26,7 @@ public class UsuarioRepository(ISqlExecutor sqlExecutor) : IUsuarioRepository
         => sqlExecutor.QueryFirstOrDefaultAsync<PerfilUsuarioResponse>("ObtenerPerfilUsuarioPorId", new { IdUsuario = idUsuario }, connectionName: ConnectionNames.Administracion);
 
     public Task<PerfilUsuarioResponse?> ObtenerPerfilPorEmailAsync(string email)
-        => sqlExecutor.QueryFirstOrDefaultAsync<PerfilUsuarioResponse>("ObtenerPerfilUsuarioPorEmail", new { Email = email }, connectionName: ConnectionNames.Administracion);
+        => sqlExecutor.QueryFirstOrDefaultAsync<PerfilUsuarioResponse>("ObtenerPerfilUsuarioPorEmail", new { pEmail = email }, connectionName: ConnectionNames.Administracion);
 
     public Task<IEnumerable<PerfilUsuarioResponse>> ListarUsuariosAsync()
         => sqlExecutor.QueryAsync<PerfilUsuarioResponse>("ObtenerUsuarios", connectionName: ConnectionNames.Administracion);

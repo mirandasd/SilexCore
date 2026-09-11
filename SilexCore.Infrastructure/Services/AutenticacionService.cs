@@ -41,7 +41,7 @@ public class AutenticacionService(IAuthServiceClient authServiceClient, IConfigu
             usuario.NombrePersona, usuario.Email, usuario.Rol, urlPlataforma, servicio, descripcion));
 
         if (response.IsSuccessStatusCode && response.Content is not null)
-            return (true, "Identidad creada correctamente.", response.Content.Mensaje);
+            return (true, "Identidad creada correctamente.", response.Content.UsuarioId);
 
         return (false, response.Error?.Message ?? "No se pudo registrar el usuario en el servicio de autenticación.", null);
     }
